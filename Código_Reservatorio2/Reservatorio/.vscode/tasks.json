@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar (XC8)",
+      "type": "shell",
+      "command": "xc8-cc",
+      "args": ["-mcpu=18F4550", "-mdfp=/home/tony/dfp/pic18/xc8", "-O1", "-std=c99", "-o", "reservatorio.hex", "reservatorio.c"],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}

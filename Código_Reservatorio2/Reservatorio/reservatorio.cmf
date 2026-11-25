@@ -1,0 +1,978 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$reservatorio.o
+cinit CODE 0 1102 1102 50 1 2
+intcode_body CODE 0 E70 E70 7E 1 2
+text0 CODE 0 F66 F66 72 1 2
+text1 CODE 0 C26 C26 A6 1 2
+text2 CODE 0 1330 1330 20 1 2
+text3 CODE 0 12A4 12A4 24 1 2
+text4 CODE 0 13A2 13A2 C 1 2
+text5 CODE 0 CCC CCC 9A 1 2
+text6 CODE 0 1048 1048 64 1 2
+text7 CODE 0 13AE 13AE 6 1 2
+text8 CODE 0 A78 A78 DE 1 2
+text9 CODE 0 1350 1350 1C 1 2
+text10 CODE 0 10AC 10AC 56 1 2
+text11 CODE 0 DEE DEE 82 1 2
+text12 CODE 0 98C 98C EC 1 2
+text13 CODE 0 1270 1270 34 1 2
+text14 CODE 0 1394 1394 E 1 2
+text15 CODE 0 D66 D66 88 1 2
+text16 CODE 0 11EE 11EE 42 1 2
+text17 CODE 0 1152 1152 50 1 2
+text18 CODE 0 1230 1230 40 1 2
+text19 CODE 0 FD8 FD8 70 1 2
+text20 CODE 0 130E 130E 22 1 2
+text21 CODE 0 136C 136C 14 1 2
+text22 CODE 0 B56 B56 D0 1 2
+text23 CODE 0 EEE EEE 78 1 2
+text24 CODE 0 12C8 12C8 24 1 2
+text25 CODE 0 898 898 F4 1 2
+text26 CODE 0 1380 1380 14 1 2
+text27 CODE 0 11A2 11A2 4C 1 2
+idataCOMRAM CODE 0 13B4 13B4 1 1 1
+cstackCOMRAM COMRAM 1 2 2 3E 1 1
+intcode CODE 0 8 8 6 1 2
+smallconst SMALLCONST 0 800 800 98 1 2
+idataBANK0 CODE 0 12EC 12EC 22 1 1
+dataBANK0 BANK0 1 60 60 22 1 1
+dataCOMRAM COMRAM 1 58 58 1 1 1
+bssCOMRAM COMRAM 1 40 40 18 1 1
+config CONFIG 4 300000 300000 8 1 1
+$startup.o
+init CODE 0 E E 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 8 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 82-7FF 1
+SFR F60-FFF 1
+BANK0 82-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-7 1
+CONST 12-7FF 1
+CONST 13B5-7FFF 1
+IDLOC 200000-200007 1
+SMALLCONST 13B5-7FFF 1
+CODE 4-7 1
+CODE 12-7FF 1
+CODE 13B5-7FFF 1
+BIGRAM 59-5F 1
+BIGRAM 82-7FF 1
+BIGSFR F60-FFF 1
+COMRAM 59-5F 1
+CONFIG 300008-30000D 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 13B5-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$reservatorio.o
+8 intcode CODE >101:/home/tony/Reservatorio/reservatorio.c
+8 intcode CODE >5645:/home/tony/Reservatorio/reservatorio.s
+E70 intcode_body CODE >101:/home/tony/Reservatorio/reservatorio.c
+E72 intcode_body CODE >104:/home/tony/Reservatorio/reservatorio.c
+E78 intcode_body CODE >105:/home/tony/Reservatorio/reservatorio.c
+E7A intcode_body CODE >106:/home/tony/Reservatorio/reservatorio.c
+E7E intcode_body CODE >107:/home/tony/Reservatorio/reservatorio.c
+E82 intcode_body CODE >108:/home/tony/Reservatorio/reservatorio.c
+E8A intcode_body CODE >110:/home/tony/Reservatorio/reservatorio.c
+E98 intcode_body CODE >111:/home/tony/Reservatorio/reservatorio.c
+EA6 intcode_body CODE >112:/home/tony/Reservatorio/reservatorio.c
+EB4 intcode_body CODE >113:/home/tony/Reservatorio/reservatorio.c
+EB4 intcode_body CODE >116:/home/tony/Reservatorio/reservatorio.c
+EBA intcode_body CODE >117:/home/tony/Reservatorio/reservatorio.c
+EBC intcode_body CODE >118:/home/tony/Reservatorio/reservatorio.c
+EBE intcode_body CODE >119:/home/tony/Reservatorio/reservatorio.c
+EC2 intcode_body CODE >120:/home/tony/Reservatorio/reservatorio.c
+EC6 intcode_body CODE >123:/home/tony/Reservatorio/reservatorio.c
+ECC intcode_body CODE >124:/home/tony/Reservatorio/reservatorio.c
+ECE intcode_body CODE >125:/home/tony/Reservatorio/reservatorio.c
+ED0 intcode_body CODE >126:/home/tony/Reservatorio/reservatorio.c
+ED4 intcode_body CODE >127:/home/tony/Reservatorio/reservatorio.c
+ED8 intcode_body CODE >130:/home/tony/Reservatorio/reservatorio.c
+EDE intcode_body CODE >131:/home/tony/Reservatorio/reservatorio.c
+EE0 intcode_body CODE >132:/home/tony/Reservatorio/reservatorio.c
+EE2 intcode_body CODE >133:/home/tony/Reservatorio/reservatorio.c
+EE6 intcode_body CODE >134:/home/tony/Reservatorio/reservatorio.c
+EEA intcode_body CODE >136:/home/tony/Reservatorio/reservatorio.c
+11A2 text27 CODE >331:/home/tony/Reservatorio/reservatorio.c
+11A2 text27 CODE >333:/home/tony/Reservatorio/reservatorio.c
+11B0 text27 CODE >334:/home/tony/Reservatorio/reservatorio.c
+11B4 text27 CODE >335:/home/tony/Reservatorio/reservatorio.c
+11B6 text27 CODE >336:/home/tony/Reservatorio/reservatorio.c
+11B6 text27 CODE >337:/home/tony/Reservatorio/reservatorio.c
+11BA text27 CODE >338:/home/tony/Reservatorio/reservatorio.c
+11D2 text27 CODE >339:/home/tony/Reservatorio/reservatorio.c
+11EC text27 CODE >340:/home/tony/Reservatorio/reservatorio.c
+1380 text26 CODE >299:/home/tony/Reservatorio/reservatorio.c
+1380 text26 CODE >301:/home/tony/Reservatorio/reservatorio.c
+1388 text26 CODE >302:/home/tony/Reservatorio/reservatorio.c
+138C text26 CODE >303:/home/tony/Reservatorio/reservatorio.c
+1390 text26 CODE >304:/home/tony/Reservatorio/reservatorio.c
+1392 text26 CODE >305:/home/tony/Reservatorio/reservatorio.c
+898 text25 CODE >343:/home/tony/Reservatorio/reservatorio.c
+898 text25 CODE >345:/home/tony/Reservatorio/reservatorio.c
+89A text25 CODE >348:/home/tony/Reservatorio/reservatorio.c
+8A0 text25 CODE >349:/home/tony/Reservatorio/reservatorio.c
+8A6 text25 CODE >350:/home/tony/Reservatorio/reservatorio.c
+8AE text25 CODE >352:/home/tony/Reservatorio/reservatorio.c
+8BC text25 CODE >353:/home/tony/Reservatorio/reservatorio.c
+8C8 text25 CODE >356:/home/tony/Reservatorio/reservatorio.c
+8D4 text25 CODE >359:/home/tony/Reservatorio/reservatorio.c
+8E0 text25 CODE >360:/home/tony/Reservatorio/reservatorio.c
+8E8 text25 CODE >361:/home/tony/Reservatorio/reservatorio.c
+8F0 text25 CODE >362:/home/tony/Reservatorio/reservatorio.c
+8F4 text25 CODE >363:/home/tony/Reservatorio/reservatorio.c
+8FA text25 CODE >364:/home/tony/Reservatorio/reservatorio.c
+8FC text25 CODE >365:/home/tony/Reservatorio/reservatorio.c
+900 text25 CODE >369:/home/tony/Reservatorio/reservatorio.c
+900 text25 CODE >370:/home/tony/Reservatorio/reservatorio.c
+902 text25 CODE >373:/home/tony/Reservatorio/reservatorio.c
+90A text25 CODE >374:/home/tony/Reservatorio/reservatorio.c
+912 text25 CODE >375:/home/tony/Reservatorio/reservatorio.c
+918 text25 CODE >377:/home/tony/Reservatorio/reservatorio.c
+91C text25 CODE >378:/home/tony/Reservatorio/reservatorio.c
+920 text25 CODE >381:/home/tony/Reservatorio/reservatorio.c
+922 text25 CODE >382:/home/tony/Reservatorio/reservatorio.c
+936 text25 CODE >385:/home/tony/Reservatorio/reservatorio.c
+946 text25 CODE >386:/home/tony/Reservatorio/reservatorio.c
+954 text25 CODE >387:/home/tony/Reservatorio/reservatorio.c
+962 text25 CODE >388:/home/tony/Reservatorio/reservatorio.c
+96A text25 CODE >390:/home/tony/Reservatorio/reservatorio.c
+98A text25 CODE >391:/home/tony/Reservatorio/reservatorio.c
+12C8 text24 CODE >393:/home/tony/Reservatorio/reservatorio.c
+12C8 text24 CODE >396:/home/tony/Reservatorio/reservatorio.c
+12CA text24 CODE >397:/home/tony/Reservatorio/reservatorio.c
+12DE text24 CODE >398:/home/tony/Reservatorio/reservatorio.c
+12E6 text24 CODE >399:/home/tony/Reservatorio/reservatorio.c
+12E8 text24 CODE >400:/home/tony/Reservatorio/reservatorio.c
+12EA text24 CODE >401:/home/tony/Reservatorio/reservatorio.c
+EEE text23 CODE >403:/home/tony/Reservatorio/reservatorio.c
+EEE text23 CODE >405:/home/tony/Reservatorio/reservatorio.c
+EFC text23 CODE >406:/home/tony/Reservatorio/reservatorio.c
+F0A text23 CODE >408:/home/tony/Reservatorio/reservatorio.c
+F18 text23 CODE >409:/home/tony/Reservatorio/reservatorio.c
+F1E text23 CODE >410:/home/tony/Reservatorio/reservatorio.c
+F2C text23 CODE >411:/home/tony/Reservatorio/reservatorio.c
+F3E text23 CODE >414:/home/tony/Reservatorio/reservatorio.c
+F4C text23 CODE >415:/home/tony/Reservatorio/reservatorio.c
+F58 text23 CODE >416:/home/tony/Reservatorio/reservatorio.c
+F5C text23 CODE >417:/home/tony/Reservatorio/reservatorio.c
+F64 text23 CODE >419:/home/tony/Reservatorio/reservatorio.c
+B56 text22 CODE >422:/home/tony/Reservatorio/reservatorio.c
+B56 text22 CODE >424:/home/tony/Reservatorio/reservatorio.c
+B5A text22 CODE >425:/home/tony/Reservatorio/reservatorio.c
+B5E text22 CODE >426:/home/tony/Reservatorio/reservatorio.c
+B62 text22 CODE >427:/home/tony/Reservatorio/reservatorio.c
+B66 text22 CODE >429:/home/tony/Reservatorio/reservatorio.c
+B6C text22 CODE >431:/home/tony/Reservatorio/reservatorio.c
+B72 text22 CODE >432:/home/tony/Reservatorio/reservatorio.c
+B78 text22 CODE >433:/home/tony/Reservatorio/reservatorio.c
+B7C text22 CODE >434:/home/tony/Reservatorio/reservatorio.c
+B80 text22 CODE >438:/home/tony/Reservatorio/reservatorio.c
+B98 text22 CODE >440:/home/tony/Reservatorio/reservatorio.c
+B9E text22 CODE >441:/home/tony/Reservatorio/reservatorio.c
+BBA text22 CODE >442:/home/tony/Reservatorio/reservatorio.c
+BD4 text22 CODE >443:/home/tony/Reservatorio/reservatorio.c
+BEC text22 CODE >445:/home/tony/Reservatorio/reservatorio.c
+BEE text22 CODE >454:/home/tony/Reservatorio/reservatorio.c
+BF2 text22 CODE >455:/home/tony/Reservatorio/reservatorio.c
+BF6 text22 CODE >456:/home/tony/Reservatorio/reservatorio.c
+BFA text22 CODE >457:/home/tony/Reservatorio/reservatorio.c
+BFC text22 CODE >460:/home/tony/Reservatorio/reservatorio.c
+C00 text22 CODE >461:/home/tony/Reservatorio/reservatorio.c
+C02 text22 CODE >464:/home/tony/Reservatorio/reservatorio.c
+C06 text22 CODE >465:/home/tony/Reservatorio/reservatorio.c
+C0A text22 CODE >466:/home/tony/Reservatorio/reservatorio.c
+C0C text22 CODE >467:/home/tony/Reservatorio/reservatorio.c
+C10 text22 CODE >471:/home/tony/Reservatorio/reservatorio.c
+C12 text22 CODE >472:/home/tony/Reservatorio/reservatorio.c
+C16 text22 CODE >473:/home/tony/Reservatorio/reservatorio.c
+C1A text22 CODE >474:/home/tony/Reservatorio/reservatorio.c
+C1E text22 CODE >475:/home/tony/Reservatorio/reservatorio.c
+C22 text22 CODE >476:/home/tony/Reservatorio/reservatorio.c
+C24 text22 CODE >477:/home/tony/Reservatorio/reservatorio.c
+136C text21 CODE >139:/home/tony/Reservatorio/reservatorio.c
+136C text21 CODE >141:/home/tony/Reservatorio/reservatorio.c
+1376 text21 CODE >142:/home/tony/Reservatorio/reservatorio.c
+137E text21 CODE >143:/home/tony/Reservatorio/reservatorio.c
+130E text20 CODE >145:/home/tony/Reservatorio/reservatorio.c
+130E text20 CODE >147:/home/tony/Reservatorio/reservatorio.c
+1312 text20 CODE >148:/home/tony/Reservatorio/reservatorio.c
+1316 text20 CODE >149:/home/tony/Reservatorio/reservatorio.c
+131A text20 CODE >150:/home/tony/Reservatorio/reservatorio.c
+132E text20 CODE >151:/home/tony/Reservatorio/reservatorio.c
+FD8 text19 CODE >160:/home/tony/Reservatorio/reservatorio.c
+FD8 text19 CODE >162:/home/tony/Reservatorio/reservatorio.c
+FDC text19 CODE >163:/home/tony/Reservatorio/reservatorio.c
+FEC text19 CODE >164:/home/tony/Reservatorio/reservatorio.c
+1002 text19 CODE >165:/home/tony/Reservatorio/reservatorio.c
+1018 text19 CODE >166:/home/tony/Reservatorio/reservatorio.c
+102E text19 CODE >167:/home/tony/Reservatorio/reservatorio.c
+1034 text19 CODE >168:/home/tony/Reservatorio/reservatorio.c
+103A text19 CODE >169:/home/tony/Reservatorio/reservatorio.c
+1040 text19 CODE >170:/home/tony/Reservatorio/reservatorio.c
+1046 text19 CODE >171:/home/tony/Reservatorio/reservatorio.c
+1230 text18 CODE >186:/home/tony/Reservatorio/reservatorio.c
+1230 text18 CODE >188:/home/tony/Reservatorio/reservatorio.c
+1234 text18 CODE >189:/home/tony/Reservatorio/reservatorio.c
+123C text18 CODE >190:/home/tony/Reservatorio/reservatorio.c
+1244 text18 CODE >191:/home/tony/Reservatorio/reservatorio.c
+124C text18 CODE >192:/home/tony/Reservatorio/reservatorio.c
+1152 text17 CODE >7:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+1152 text17 CODE >13:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+1158 text17 CODE >14:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+1160 text17 CODE >15:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+1164 text17 CODE >16:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+1166 text17 CODE >17:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+116C text17 CODE >18:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+116E text17 CODE >16:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+1172 text17 CODE >21:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+1178 text17 CODE >22:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+1184 text17 CODE >23:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+118C text17 CODE >24:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+118E text17 CODE >26:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+1194 text17 CODE >27:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+1198 text17 CODE >28:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+1198 text17 CODE >29:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+11A0 text17 CODE >30:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwdiv.c
+11EE text16 CODE >7:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+11EE text16 CODE >12:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+11F6 text16 CODE >13:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+11FA text16 CODE >14:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+11FC text16 CODE >15:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+1202 text16 CODE >16:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+1204 text16 CODE >14:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+1208 text16 CODE >19:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+1214 text16 CODE >20:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+121C text16 CODE >21:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+1222 text16 CODE >22:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+1226 text16 CODE >23:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+1226 text16 CODE >24:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+122E text16 CODE >25:/opt/microchip/xc8/v4.00/pic/sources/c99/common/lwmod.c
+D66 text15 CODE >179:/home/tony/Reservatorio/reservatorio.c
+D66 text15 CODE >181:/home/tony/Reservatorio/reservatorio.c
+D96 text15 CODE >182:/home/tony/Reservatorio/reservatorio.c
+DCA text15 CODE >183:/home/tony/Reservatorio/reservatorio.c
+DEC text15 CODE >184:/home/tony/Reservatorio/reservatorio.c
+1394 text14 CODE >153:/home/tony/Reservatorio/reservatorio.c
+1394 text14 CODE >155:/home/tony/Reservatorio/reservatorio.c
+1398 text14 CODE >156:/home/tony/Reservatorio/reservatorio.c
+139C text14 CODE >157:/home/tony/Reservatorio/reservatorio.c
+13A0 text14 CODE >158:/home/tony/Reservatorio/reservatorio.c
+1270 text13 CODE >173:/home/tony/Reservatorio/reservatorio.c
+1270 text13 CODE >175:/home/tony/Reservatorio/reservatorio.c
+128A text13 CODE >176:/home/tony/Reservatorio/reservatorio.c
+98C text12 CODE >195:/home/tony/Reservatorio/reservatorio.c
+98C text12 CODE >197:/home/tony/Reservatorio/reservatorio.c
+99E text12 CODE >198:/home/tony/Reservatorio/reservatorio.c
+9B0 text12 CODE >200:/home/tony/Reservatorio/reservatorio.c
+9BE text12 CODE >201:/home/tony/Reservatorio/reservatorio.c
+9CE text12 CODE >204:/home/tony/Reservatorio/reservatorio.c
+9E0 text12 CODE >205:/home/tony/Reservatorio/reservatorio.c
+A02 text12 CODE >206:/home/tony/Reservatorio/reservatorio.c
+A0E text12 CODE >207:/home/tony/Reservatorio/reservatorio.c
+A12 text12 CODE >208:/home/tony/Reservatorio/reservatorio.c
+A28 text12 CODE >209:/home/tony/Reservatorio/reservatorio.c
+A3E text12 CODE >210:/home/tony/Reservatorio/reservatorio.c
+A5A text12 CODE >211:/home/tony/Reservatorio/reservatorio.c
+A62 text12 CODE >213:/home/tony/Reservatorio/reservatorio.c
+A6C text12 CODE >214:/home/tony/Reservatorio/reservatorio.c
+A76 text12 CODE >215:/home/tony/Reservatorio/reservatorio.c
+DEE text11 CODE >7:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+DEE text11 CODE >13:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+DFE text11 CODE >14:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E0A text11 CODE >15:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E0E text11 CODE >16:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E10 text11 CODE >17:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E1A text11 CODE >18:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E1C text11 CODE >16:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E20 text11 CODE >21:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E2A text11 CODE >22:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E3E text11 CODE >23:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E4E text11 CODE >24:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E50 text11 CODE >26:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E5A text11 CODE >27:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E5E text11 CODE >28:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E5E text11 CODE >29:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+E6E text11 CODE >30:/opt/microchip/xc8/v4.00/pic/sources/c99/common/__lldiv.c
+10AC text10 CODE >15:/opt/microchip/xc8/v4.00/pic/sources/c99/common/Umul32.c
+10AC text10 CODE >119:/opt/microchip/xc8/v4.00/pic/sources/c99/common/Umul32.c
+10BC text10 CODE >121:/opt/microchip/xc8/v4.00/pic/sources/c99/common/Umul32.c
+10C0 text10 CODE >122:/opt/microchip/xc8/v4.00/pic/sources/c99/common/Umul32.c
+10D0 text10 CODE >123:/opt/microchip/xc8/v4.00/pic/sources/c99/common/Umul32.c
+10DA text10 CODE >124:/opt/microchip/xc8/v4.00/pic/sources/c99/common/Umul32.c
+10E4 text10 CODE >125:/opt/microchip/xc8/v4.00/pic/sources/c99/common/Umul32.c
+10F0 text10 CODE >128:/opt/microchip/xc8/v4.00/pic/sources/c99/common/Umul32.c
+1100 text10 CODE >129:/opt/microchip/xc8/v4.00/pic/sources/c99/common/Umul32.c
+1350 text9 CODE >218:/home/tony/Reservatorio/reservatorio.c
+1350 text9 CODE >220:/home/tony/Reservatorio/reservatorio.c
+1358 text9 CODE >221:/home/tony/Reservatorio/reservatorio.c
+135A text9 CODE >222:/home/tony/Reservatorio/reservatorio.c
+135E text9 CODE >223:/home/tony/Reservatorio/reservatorio.c
+136A text9 CODE >224:/home/tony/Reservatorio/reservatorio.c
+A78 text8 CODE >226:/home/tony/Reservatorio/reservatorio.c
+A78 text8 CODE >228:/home/tony/Reservatorio/reservatorio.c
+A7E text8 CODE >229:/home/tony/Reservatorio/reservatorio.c
+A94 text8 CODE >230:/home/tony/Reservatorio/reservatorio.c
+AB0 text8 CODE >231:/home/tony/Reservatorio/reservatorio.c
+B00 text8 CODE >232:/home/tony/Reservatorio/reservatorio.c
+B54 text8 CODE >233:/home/tony/Reservatorio/reservatorio.c
+13AE text7 CODE >293:/home/tony/Reservatorio/reservatorio.c
+13AE text7 CODE >295:/home/tony/Reservatorio/reservatorio.c
+13B0 text7 CODE >296:/home/tony/Reservatorio/reservatorio.c
+13B2 text7 CODE >297:/home/tony/Reservatorio/reservatorio.c
+1048 text6 CODE >283:/home/tony/Reservatorio/reservatorio.c
+1048 text6 CODE >285:/home/tony/Reservatorio/reservatorio.c
+1070 text6 CODE >286:/home/tony/Reservatorio/reservatorio.c
+1082 text6 CODE >287:/home/tony/Reservatorio/reservatorio.c
+1094 text6 CODE >288:/home/tony/Reservatorio/reservatorio.c
+1098 text6 CODE >289:/home/tony/Reservatorio/reservatorio.c
+10A6 text6 CODE >290:/home/tony/Reservatorio/reservatorio.c
+10AA text6 CODE >291:/home/tony/Reservatorio/reservatorio.c
+CCC text5 CODE >307:/home/tony/Reservatorio/reservatorio.c
+CCC text5 CODE >309:/home/tony/Reservatorio/reservatorio.c
+CD2 text5 CODE >311:/home/tony/Reservatorio/reservatorio.c
+CD8 text5 CODE >312:/home/tony/Reservatorio/reservatorio.c
+CDE text5 CODE >313:/home/tony/Reservatorio/reservatorio.c
+CF6 text5 CODE >314:/home/tony/Reservatorio/reservatorio.c
+D08 text5 CODE >315:/home/tony/Reservatorio/reservatorio.c
+D18 text5 CODE >316:/home/tony/Reservatorio/reservatorio.c
+D1C text5 CODE >317:/home/tony/Reservatorio/reservatorio.c
+D1C text5 CODE >318:/home/tony/Reservatorio/reservatorio.c
+D1E text5 CODE >319:/home/tony/Reservatorio/reservatorio.c
+D26 text5 CODE >322:/home/tony/Reservatorio/reservatorio.c
+D2E text5 CODE >323:/home/tony/Reservatorio/reservatorio.c
+D42 text5 CODE >324:/home/tony/Reservatorio/reservatorio.c
+D50 text5 CODE >325:/home/tony/Reservatorio/reservatorio.c
+D5C text5 CODE >326:/home/tony/Reservatorio/reservatorio.c
+D64 text5 CODE >328:/home/tony/Reservatorio/reservatorio.c
+13A2 text4 CODE >237:/home/tony/Reservatorio/reservatorio.c
+12A4 text3 CODE >239:/home/tony/Reservatorio/reservatorio.c
+12A4 text3 CODE >241:/home/tony/Reservatorio/reservatorio.c
+12B4 text3 CODE >242:/home/tony/Reservatorio/reservatorio.c
+12C6 text3 CODE >243:/home/tony/Reservatorio/reservatorio.c
+1330 text2 CODE >238:/home/tony/Reservatorio/reservatorio.c
+C26 text1 CODE >244:/home/tony/Reservatorio/reservatorio.c
+C26 text1 CODE >246:/home/tony/Reservatorio/reservatorio.c
+C40 text1 CODE >247:/home/tony/Reservatorio/reservatorio.c
+C54 text1 CODE >248:/home/tony/Reservatorio/reservatorio.c
+C6A text1 CODE >249:/home/tony/Reservatorio/reservatorio.c
+C88 text1 CODE >250:/home/tony/Reservatorio/reservatorio.c
+C90 text1 CODE >251:/home/tony/Reservatorio/reservatorio.c
+C9E text1 CODE >252:/home/tony/Reservatorio/reservatorio.c
+CAA text1 CODE >253:/home/tony/Reservatorio/reservatorio.c
+CB6 text1 CODE >254:/home/tony/Reservatorio/reservatorio.c
+CC2 text1 CODE >255:/home/tony/Reservatorio/reservatorio.c
+CCA text1 CODE >256:/home/tony/Reservatorio/reservatorio.c
+F66 text0 CODE >480:/home/tony/Reservatorio/reservatorio.c
+F66 text0 CODE >482:/home/tony/Reservatorio/reservatorio.c
+F6A text0 CODE >484:/home/tony/Reservatorio/reservatorio.c
+F6C text0 CODE >487:/home/tony/Reservatorio/reservatorio.c
+F70 text0 CODE >488:/home/tony/Reservatorio/reservatorio.c
+F74 text0 CODE >489:/home/tony/Reservatorio/reservatorio.c
+F78 text0 CODE >490:/home/tony/Reservatorio/reservatorio.c
+F7C text0 CODE >491:/home/tony/Reservatorio/reservatorio.c
+F80 text0 CODE >494:/home/tony/Reservatorio/reservatorio.c
+F82 text0 CODE >495:/home/tony/Reservatorio/reservatorio.c
+F88 text0 CODE >496:/home/tony/Reservatorio/reservatorio.c
+F8E text0 CODE >497:/home/tony/Reservatorio/reservatorio.c
+F90 text0 CODE >498:/home/tony/Reservatorio/reservatorio.c
+F94 text0 CODE >501:/home/tony/Reservatorio/reservatorio.c
+F94 text0 CODE >502:/home/tony/Reservatorio/reservatorio.c
+F9A text0 CODE >504:/home/tony/Reservatorio/reservatorio.c
+F9E text0 CODE >505:/home/tony/Reservatorio/reservatorio.c
+FA2 text0 CODE >507:/home/tony/Reservatorio/reservatorio.c
+FAA text0 CODE >508:/home/tony/Reservatorio/reservatorio.c
+FAC text0 CODE >509:/home/tony/Reservatorio/reservatorio.c
+FB0 text0 CODE >510:/home/tony/Reservatorio/reservatorio.c
+FB4 text0 CODE >512:/home/tony/Reservatorio/reservatorio.c
+FC2 text0 CODE >515:/home/tony/Reservatorio/reservatorio.c
+FCA text0 CODE >516:/home/tony/Reservatorio/reservatorio.c
+FCC text0 CODE >517:/home/tony/Reservatorio/reservatorio.c
+FD0 text0 CODE >501:/home/tony/Reservatorio/reservatorio.c
+1102 cinit CODE >876:/home/tony/Reservatorio/reservatorio.s
+1102 cinit CODE >878:/home/tony/Reservatorio/reservatorio.s
+1102 cinit CODE >881:/home/tony/Reservatorio/reservatorio.s
+1102 cinit CODE >948:/home/tony/Reservatorio/reservatorio.s
+1104 cinit CODE >949:/home/tony/Reservatorio/reservatorio.s
+1106 cinit CODE >950:/home/tony/Reservatorio/reservatorio.s
+1108 cinit CODE >951:/home/tony/Reservatorio/reservatorio.s
+110A cinit CODE >952:/home/tony/Reservatorio/reservatorio.s
+110C cinit CODE >953:/home/tony/Reservatorio/reservatorio.s
+110E cinit CODE >954:/home/tony/Reservatorio/reservatorio.s
+1112 cinit CODE >955:/home/tony/Reservatorio/reservatorio.s
+1116 cinit CODE >956:/home/tony/Reservatorio/reservatorio.s
+1116 cinit CODE >957:/home/tony/Reservatorio/reservatorio.s
+1118 cinit CODE >958:/home/tony/Reservatorio/reservatorio.s
+111C cinit CODE >959:/home/tony/Reservatorio/reservatorio.s
+111E cinit CODE >960:/home/tony/Reservatorio/reservatorio.s
+1120 cinit CODE >961:/home/tony/Reservatorio/reservatorio.s
+1122 cinit CODE >965:/home/tony/Reservatorio/reservatorio.s
+1124 cinit CODE >966:/home/tony/Reservatorio/reservatorio.s
+1126 cinit CODE >967:/home/tony/Reservatorio/reservatorio.s
+1128 cinit CODE >968:/home/tony/Reservatorio/reservatorio.s
+112A cinit CODE >969:/home/tony/Reservatorio/reservatorio.s
+112C cinit CODE >970:/home/tony/Reservatorio/reservatorio.s
+112E cinit CODE >971:/home/tony/Reservatorio/reservatorio.s
+1130 cinit CODE >972:/home/tony/Reservatorio/reservatorio.s
+1134 cinit CODE >976:/home/tony/Reservatorio/reservatorio.s
+1138 cinit CODE >977:/home/tony/Reservatorio/reservatorio.s
+113A cinit CODE >978:/home/tony/Reservatorio/reservatorio.s
+113A cinit CODE >979:/home/tony/Reservatorio/reservatorio.s
+113C cinit CODE >980:/home/tony/Reservatorio/reservatorio.s
+113E cinit CODE >981:/home/tony/Reservatorio/reservatorio.s
+1140 cinit CODE >987:/home/tony/Reservatorio/reservatorio.s
+1140 cinit CODE >989:/home/tony/Reservatorio/reservatorio.s
+1142 cinit CODE >990:/home/tony/Reservatorio/reservatorio.s
+1144 cinit CODE >992:/home/tony/Reservatorio/reservatorio.s
+1146 cinit CODE >993:/home/tony/Reservatorio/reservatorio.s
+1148 cinit CODE >994:/home/tony/Reservatorio/reservatorio.s
+114A cinit CODE >995:/home/tony/Reservatorio/reservatorio.s
+114C cinit CODE >996:/home/tony/Reservatorio/reservatorio.s
+114E cinit CODE >997:/home/tony/Reservatorio/reservatorio.s
+$startup.o
+E init CODE >101:/home/tony/Reservatorio/startup.s
+0 reset_vec CODE >66:/home/tony/Reservatorio/startup.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+sound_tick@f 22 0 COMRAM 1 cstackCOMRAM reservatorio.o
+___lwmod@counter D 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 reservatorio.o
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst reservatorio.o
+__Hspace_0 13B5 0 ABS 0 - reservatorio.o
+__Hspace_1 82 0 ABS 0 - reservatorio.o
+__Hspace_2 0 0 ABS 0 - reservatorio.o
+__Hspace_4 600008 0 ABS 0 - reservatorio.o
+__HidataBANK0 0 0 ABS 0 idataBANK0 reservatorio.o
+_sample_level A78 0 CODE 0 text8 reservatorio.o
+__Hibigdata 0 0 CODE 0 ibigdata reservatorio.o
+__mediumconst 800 0 SMALLCONST 0 smallconst reservatorio.o
+__end_of_alarm_text 1270 0 CODE 0 text18 reservatorio.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data reservatorio.o
+__L__absolute__ 0 0 ABS 0 __absolute__ reservatorio.o
+__Lsmallconst 800 0 SMALLCONST 0 smallconst reservatorio.o
+_LATA F89 0 ABS 0 - reservatorio.o
+_LATB F8A 0 ABS 0 - reservatorio.o
+_LATC F8B 0 ABS 0 - reservatorio.o
+_LATD F8C 0 ABS 0 - reservatorio.o
+_LATE F8D 0 ABS 0 - reservatorio.o
+___sp 0 0 STACK 2 stack startup.o
+_fmt3 D66 0 CODE 0 text15 reservatorio.o
+_main F66 0 CODE 0 text0 reservatorio.o
+_take 12C8 0 CODE 0 text24 reservatorio.o
+btemp 1 0 ABS 0 - reservatorio.o
+___stack_hi 0 0 STACK 2 stack startup.o
+___stack_lo 0 0 STACK 2 stack startup.o
+start E 0 CODE 0 init startup.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM reservatorio.o
+_tone_on 1048 0 CODE 0 text6 reservatorio.o
+?___lmul 2 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 reservatorio.o
+__Hpowerup 0 0 CODE 0 powerup reservatorio.o
+take@f 2 0 COMRAM 1 cstackCOMRAM reservatorio.o
+take@v 3 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_T0CONbits FD5 0 ABS 0 - reservatorio.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM reservatorio.o
+__end_of_lcd_pulse 1380 0 CODE 0 text21 reservatorio.o
+__end_of_alm_fault 80A 0 SMALLCONST 0 smallconst reservatorio.o
+__accesstop 60 0 ABS 0 - startup.o
+intlevel0 0 0 CODE 0 text startup.o
+intlevel1 0 0 CODE 0 text startup.o
+intlevel2 0 0 CODE 0 text startup.o
+intlevel3 0 0 CODE 0 text startup.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM reservatorio.o
+__end_of_lcd_refresh A78 0 CODE 0 text12 reservatorio.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM reservatorio.o
+__Hifardata 0 0 CODE 0 ifardata reservatorio.o
+__Hclrtext 0 0 ABS 0 clrtext reservatorio.o
+__pidataCOMRAM 13B4 0 CODE 0 idataCOMRAM reservatorio.o
+__end_of_hw_init C26 0 CODE 0 text22 reservatorio.o
+__end_of_sample_level B56 0 CODE 0 text8 reservatorio.o
+_lcd_pulse 136C 0 CODE 0 text21 reservatorio.o
+_lcd_line$538 6 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_alm_crit 813 0 SMALLCONST 0 smallconst reservatorio.o
+_alm_over 80A 0 SMALLCONST 0 smallconst reservatorio.o
+_alm_fault 801 0 SMALLCONST 0 smallconst reservatorio.o
+tone_on@f 1B 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_ADCON0 FC2 0 ABS 0 - reservatorio.o
+_ADCON1 FC1 0 ABS 0 - reservatorio.o
+_ADCON2 FC0 0 ABS 0 - reservatorio.o
+_ADRESH FC4 0 ABS 0 - reservatorio.o
+_ADRESL FC3 0 ABS 0 - reservatorio.o
+__end_of_lcd_cmd 1330 0 CODE 0 text20 reservatorio.o
+___inthi_sp 0 0 STACK 2 stack startup.o
+___intlo_sp 0 0 STACK 2 stack startup.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM reservatorio.o
+_CCPR2L FBB 0 ABS 0 - reservatorio.o
+__end_of_alm_crit 81C 0 SMALLCONST 0 smallconst reservatorio.o
+__end_of_alm_over 813 0 SMALLCONST 0 smallconst reservatorio.o
+__Hintcode_body 0 0 ABS 0 intcode_body reservatorio.o
+__end_of___lmul 1102 0 CODE 0 text10 reservatorio.o
+?_adc_read_once 2 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs reservatorio.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst reservatorio.o
+__Hintcodelo 18 0 CODE 0 intcodelo reservatorio.o
+___lwmod@divisor B 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__end_of___lldiv E70 0 CODE 0 text11 reservatorio.o
+__end_of___lwdiv 11A2 0 CODE 0 text17 reservatorio.o
+__end_of___lwmod 1230 0 CODE 0 text16 reservatorio.o
+lcd_refresh@i 3C 0 COMRAM 1 cstackCOMRAM reservatorio.o
+lcd_refresh@m 3A 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_lcd_refresh$562 3B 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_lcd_refresh$564 34 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_lcd_refresh$565 36 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_lcd_refresh$566 38 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__end_of_sound_alarm 1394 0 CODE 0 text26 reservatorio.o
+___lwdiv@quotient 6 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM reservatorio.o
+_INTCON2bits FF1 0 ABS 0 - reservatorio.o
+_INTCON3bits FF0 0 ABS 0 - reservatorio.o
+___lwmod@dividend 9 0 COMRAM 1 cstackCOMRAM reservatorio.o
+___lldiv@counter 1A 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__Lintcodelo 18 0 CODE 0 intcodelo reservatorio.o
+start_initialization 1102 0 CODE 0 cinit reservatorio.o
+_level_cm 47 0 COMRAM 1 bssCOMRAM reservatorio.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM reservatorio.o
+___lldiv@dividend E 0 COMRAM 1 cstackCOMRAM reservatorio.o
+___rparam_used 1 0 ABS 0 - reservatorio.o
+_handle_buttons EEE 0 CODE 0 text23 reservatorio.o
+isa$xinst 0 0 ABS 0 - startup.o
+control_step@ativo 5 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_uart_log C26 0 CODE 0 text1 reservatorio.o
+main@t_amostra 3D 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__Hbank0 0 0 ABS 0 bank0 reservatorio.o
+__Hbank1 0 0 ABS 0 bank1 reservatorio.o
+__Hbank2 0 0 ABS 0 bank2 reservatorio.o
+__Hbank3 0 0 ABS 0 bank3 reservatorio.o
+__Hbank4 0 0 ABS 0 bank4 reservatorio.o
+__Hbank5 0 0 ABS 0 bank5 reservatorio.o
+__Hbank6 0 0 ABS 0 bank6 reservatorio.o
+__Hbank7 0 0 ABS 0 bank7 reservatorio.o
+__Hcinit 0 0 ABS 0 cinit reservatorio.o
+__Hconst 0 0 CONST 0 const reservatorio.o
+__Hidata 0 0 CODE 0 idata reservatorio.o
+__Hidloc 0 0 ABS 0 idloc reservatorio.o
+__Hnvbit 0 0 COMRAM 1 nvbit reservatorio.o
+__Hparam 0 0 COMRAM 1 rparam reservatorio.o
+__Hrdata 0 0 COMRAM 1 rdata reservatorio.o
+__Hstack 0 0 STACK 2 stack reservatorio.o
+__Htext0 0 0 ABS 0 text0 reservatorio.o
+__Htext1 0 0 ABS 0 text1 reservatorio.o
+__Htext2 0 0 ABS 0 text2 reservatorio.o
+__Htext3 0 0 ABS 0 text3 reservatorio.o
+__Htext4 0 0 ABS 0 text4 reservatorio.o
+__Htext5 0 0 ABS 0 text5 reservatorio.o
+__Htext6 0 0 ABS 0 text6 reservatorio.o
+__Htext7 0 0 ABS 0 text7 reservatorio.o
+__Htext8 0 0 ABS 0 text8 reservatorio.o
+__Htext9 0 0 ABS 0 text9 reservatorio.o
+___lwdiv@counter 8 0 COMRAM 1 cstackCOMRAM reservatorio.o
+lcd_cmd@c 3 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__end_of_uart_log CCC 0 CODE 0 text1 reservatorio.o
+__Hbigbss 0 0 BIGRAM 1 bigbss reservatorio.o
+__Hbigram 0 0 ABS 0 bigram reservatorio.o
+__Hbigsfr 0 0 ABS 0 bigsfr reservatorio.o
+__smallconst 800 0 SMALLCONST 0 smallconst reservatorio.o
+_control_step$665 4 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__Hcomram 0 0 ABS 0 comram reservatorio.o
+__Hconfig 300008 0 CONFIG 4 config reservatorio.o
+__Lbank0 0 0 ABS 0 bank0 reservatorio.o
+__Lbank1 0 0 ABS 0 bank1 reservatorio.o
+__Lbank2 0 0 ABS 0 bank2 reservatorio.o
+__Lbank3 0 0 ABS 0 bank3 reservatorio.o
+__Lbank4 0 0 ABS 0 bank4 reservatorio.o
+__Lbank5 0 0 ABS 0 bank5 reservatorio.o
+__Lbank6 0 0 ABS 0 bank6 reservatorio.o
+__Lbank7 0 0 ABS 0 bank7 reservatorio.o
+__Lcinit 0 0 ABS 0 cinit reservatorio.o
+__Lconst 0 0 CONST 0 const reservatorio.o
+__Lidata 0 0 CODE 0 idata reservatorio.o
+__Lidloc 0 0 ABS 0 idloc reservatorio.o
+__Lnvbit 0 0 COMRAM 1 nvbit reservatorio.o
+__Lparam 0 0 COMRAM 1 rparam reservatorio.o
+__Lrdata 0 0 COMRAM 1 rdata reservatorio.o
+__Lstack 0 0 STACK 2 stack reservatorio.o
+__Ltext0 0 0 ABS 0 text0 reservatorio.o
+__Ltext1 0 0 ABS 0 text1 reservatorio.o
+__Ltext2 0 0 ABS 0 text2 reservatorio.o
+__Ltext3 0 0 ABS 0 text3 reservatorio.o
+__Ltext4 0 0 ABS 0 text4 reservatorio.o
+__Ltext5 0 0 ABS 0 text5 reservatorio.o
+__Ltext6 0 0 ABS 0 text6 reservatorio.o
+__Ltext7 0 0 ABS 0 text7 reservatorio.o
+__Ltext8 0 0 ABS 0 text8 reservatorio.o
+__Ltext9 0 0 ABS 0 text9 reservatorio.o
+__Hfarbss 0 0 FARRAM 0 farbss reservatorio.o
+__Lintcode_body 0 0 ABS 0 intcode_body reservatorio.o
+_ack_mask 50 0 COMRAM 1 bssCOMRAM reservatorio.o
+_INTCONbits FF2 0 ABS 0 - reservatorio.o
+control_step@a 6 0 COMRAM 1 cstackCOMRAM reservatorio.o
+lcd_refresh@F3377 71 0 BANK0 1 dataBANK0 reservatorio.o
+lcd_refresh@F3379 60 0 BANK0 1 dataBANK0 reservatorio.o
+__Habs1 0 0 ABS 0 abs1 reservatorio.o
+__Hdata 0 0 ABS 0 data reservatorio.o
+__Hheap 0 0 HEAP 7 heap reservatorio.o
+__Hinit 12 0 CODE 0 init reservatorio.o
+__Hrbit 0 0 COMRAM 1 rbit reservatorio.o
+__Hrbss 0 0 COMRAM 1 rbss reservatorio.o
+__Htemp 0 0 COMRAM 1 temp reservatorio.o
+__Htext 0 0 ABS 0 text reservatorio.o
+__Labs1 0 0 ABS 0 abs1 reservatorio.o
+__Ldata 0 0 ABS 0 data reservatorio.o
+__Lheap 0 0 HEAP 7 heap reservatorio.o
+__Linit E 0 CODE 0 init reservatorio.o
+__Lrbit 0 0 COMRAM 1 rbit reservatorio.o
+__Lrbss 0 0 COMRAM 1 rbss reservatorio.o
+__Ltemp 0 0 COMRAM 1 temp reservatorio.o
+__Ltext 0 0 ABS 0 text reservatorio.o
+lcd_refresh@l1 12 0 COMRAM 1 cstackCOMRAM reservatorio.o
+lcd_refresh@l2 23 0 COMRAM 1 cstackCOMRAM reservatorio.o
+___lmul 10AC 0 CODE 0 text10 reservatorio.o
+int$flags 1 0 ABS 0 - reservatorio.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM reservatorio.o
+__end_of_handle_buttons F66 0 CODE 0 text23 reservatorio.o
+__Hintret 0 0 ABS 0 intret reservatorio.o
+__Hirdata 0 0 CODE 0 irdata reservatorio.o
+_PR2 FCB 0 ABS 0 - reservatorio.o
+__S0 13B5 0 ABS 0 - reservatorio.o
+__S1 82 0 ABS 0 - reservatorio.o
+__S4 0 0 ABS 0 - reservatorio.o
+__S5 0 0 ABS 0 - reservatorio.o
+_deb 40 0 COMRAM 1 bssCOMRAM reservatorio.o
+_isr 8 0 CODE 0 intcode reservatorio.o
+_adc_read_once 1350 0 CODE 0 text9 reservatorio.o
+_alarms 51 0 COMRAM 1 bssCOMRAM reservatorio.o
+_level_pct 4F 0 COMRAM 1 bssCOMRAM reservatorio.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM reservatorio.o
+__Lbigdata 0 0 BIGRAM 1 bigdata reservatorio.o
+__Hnvrram 0 0 COMRAM 1 nvrram reservatorio.o
+_hw_init B56 0 CODE 0 text22 reservatorio.o
+__end_of_isr EEE 0 CODE 0 intcode_body reservatorio.o
+int_func E70 0 CODE 0 intcode_body reservatorio.o
+_lcd_init FD8 0 CODE 0 text19 reservatorio.o
+_lcd_line 1270 0 CODE 0 text13 reservatorio.o
+_lcd_putc 1394 0 CODE 0 text14 reservatorio.o
+_uart_log$603 16 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_uart_log$608 17 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__Lintentry 0 0 ABS 0 intentry reservatorio.o
+___lldiv@divisor 12 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_lcd_cmd 130E 0 CODE 0 text20 reservatorio.o
+__Hramtop 800 0 RAM 0 ramtop reservatorio.o
+__Hrparam 0 0 COMRAM 1 rparam reservatorio.o
+__pdataBANK0 60 0 BANK0 1 dataBANK0 reservatorio.o
+__activetblptr 1 0 ABS 0 - reservatorio.o
+__Hstruct 0 0 COMRAM 1 struct reservatorio.o
+__end_of_lcd_init 1048 0 CODE 0 text19 reservatorio.o
+__end_of_lcd_line 12A4 0 CODE 0 text13 reservatorio.o
+__end_of_lcd_putc 13A2 0 CODE 0 text14 reservatorio.o
+__Htext10 0 0 ABS 0 text10 reservatorio.o
+__Htext11 0 0 ABS 0 text11 reservatorio.o
+__Htext12 0 0 ABS 0 text12 reservatorio.o
+__Htext13 0 0 ABS 0 text13 reservatorio.o
+__Htext14 0 0 ABS 0 text14 reservatorio.o
+__Htext15 0 0 ABS 0 text15 reservatorio.o
+__Htext16 0 0 ABS 0 text16 reservatorio.o
+__Htext17 0 0 ABS 0 text17 reservatorio.o
+__Htext18 0 0 ABS 0 text18 reservatorio.o
+__Htext19 0 0 ABS 0 text19 reservatorio.o
+__Htext20 0 0 ABS 0 text20 reservatorio.o
+__Htext21 0 0 ABS 0 text21 reservatorio.o
+__Htext22 0 0 ABS 0 text22 reservatorio.o
+__Htext23 0 0 ABS 0 text23 reservatorio.o
+__Htext24 0 0 ABS 0 text24 reservatorio.o
+__Htext25 0 0 ABS 0 text25 reservatorio.o
+__Htext26 0 0 ABS 0 text26 reservatorio.o
+__Htext27 0 0 ABS 0 text27 reservatorio.o
+sound_alarm@pat 2 0 COMRAM 1 cstackCOMRAM reservatorio.o
+sample_level@adc 1F 0 COMRAM 1 cstackCOMRAM reservatorio.o
+sample_level@sum 1D 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__ptext10 10AC 0 CODE 0 text10 reservatorio.o
+__ptext11 DEE 0 CODE 0 text11 reservatorio.o
+__ptext12 98C 0 CODE 0 text12 reservatorio.o
+__ptext13 1270 0 CODE 0 text13 reservatorio.o
+__ptext14 1394 0 CODE 0 text14 reservatorio.o
+__ptext15 D66 0 CODE 0 text15 reservatorio.o
+__ptext16 11EE 0 CODE 0 text16 reservatorio.o
+__ptext17 1152 0 CODE 0 text17 reservatorio.o
+__ptext18 1230 0 CODE 0 text18 reservatorio.o
+__ptext19 FD8 0 CODE 0 text19 reservatorio.o
+__ptext20 130E 0 CODE 0 text20 reservatorio.o
+__ptext21 136C 0 CODE 0 text21 reservatorio.o
+__ptext22 B56 0 CODE 0 text22 reservatorio.o
+__ptext23 EEE 0 CODE 0 text23 reservatorio.o
+__ptext24 12C8 0 CODE 0 text24 reservatorio.o
+__ptext25 898 0 CODE 0 text25 reservatorio.o
+__ptext26 1380 0 CODE 0 text26 reservatorio.o
+__ptext27 11A2 0 CODE 0 text27 reservatorio.o
+_BAUDCON FB8 0 ABS 0 - reservatorio.o
+__pintcode_body E70 0 CODE 0 intcode_body reservatorio.o
+___lldiv DEE 0 CODE 0 text11 reservatorio.o
+___lwdiv 1152 0 CODE 0 text17 reservatorio.o
+___lwmod 11EE 0 CODE 0 text16 reservatorio.o
+__Lbigbss 0 0 BIGRAM 1 bigbss reservatorio.o
+__Lbigram 0 0 ABS 0 bigram reservatorio.o
+__Lbigsfr 0 0 ABS 0 bigsfr reservatorio.o
+___lmul@multiplier 2 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__Lcomram 0 0 ABS 0 comram reservatorio.o
+__Lconfig 0 0 CONFIG 4 config reservatorio.o
+_evt_ack 55 0 COMRAM 1 bssCOMRAM reservatorio.o
+_tone_off 13AE 0 CODE 0 text7 reservatorio.o
+_LATBbits F8A 0 ABS 0 - reservatorio.o
+_LATCbits F8B 0 ABS 0 - reservatorio.o
+_LATEbits F8D 0 ABS 0 - reservatorio.o
+__Lsivt_hi 0 0 CODE 0 sivt_hi reservatorio.o
+__Lsivt_lo 18 0 CODE 0 sivt_lo reservatorio.o
+lcd_line@row 5 0 COMRAM 1 cstackCOMRAM reservatorio.o
+set_pump@on 3 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__Lfarbss 0 0 FARRAM 0 farbss reservatorio.o
+___inthi_stack_hi 0 0 STACK 2 stack startup.o
+___inthi_stack_lo 0 0 STACK 2 stack startup.o
+___lwdiv@divisor 4 0 COMRAM 1 cstackCOMRAM reservatorio.o
+main@t_lcd 3E 0 COMRAM 1 cstackCOMRAM reservatorio.o
+main@t_log 3F 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__Lfardata 0 0 FARRAM 0 fardata reservatorio.o
+isa$std 1 0 ABS 0 - startup.o
+__end_of_tone_off 13B4 0 CODE 0 text7 reservatorio.o
+hw_init@idle 4 0 COMRAM 1 cstackCOMRAM reservatorio.o
+stackhi 0 0 ABS 0 - startup.o
+stacklo 0 0 ABS 0 - startup.o
+__Lintcode 8 0 CODE 0 intcode reservatorio.o
+__Lintret 0 0 ABS 0 intret reservatorio.o
+__Lirdata 0 0 CODE 0 irdata reservatorio.o
+_ADCON0bits FC2 0 ABS 0 - reservatorio.o
+sample_level@i 21 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__Lspace_0 0 0 ABS 0 - reservatorio.o
+__Lspace_1 0 0 ABS 0 - reservatorio.o
+__Lspace_2 0 0 ABS 0 - reservatorio.o
+__Lspace_4 0 0 ABS 0 - reservatorio.o
+__pbssCOMRAM 40 0 COMRAM 1 bssCOMRAM reservatorio.o
+_PIR1bits F9E 0 ABS 0 - reservatorio.o
+__end_of_tone_on 10AC 0 CODE 0 text6 reservatorio.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM reservatorio.o
+_sound_tick CCC 0 CODE 0 text5 reservatorio.o
+end_of_initialization 1140 0 CODE 0 cinit reservatorio.o
+__Lnvrram 0 0 COMRAM 1 nvrram reservatorio.o
+__Hintentry 0 0 ABS 0 intentry reservatorio.o
+_RCONbits FD0 0 ABS 0 - reservatorio.o
+_lcd_refresh 98C 0 CODE 0 text12 reservatorio.o
+_auto_mode 58 0 COMRAM 1 dataCOMRAM reservatorio.o
+___lwdiv@dividend 2 0 COMRAM 1 cstackCOMRAM reservatorio.o
+?___lldiv E 0 COMRAM 1 cstackCOMRAM reservatorio.o
+?___lwdiv 2 0 COMRAM 1 cstackCOMRAM reservatorio.o
+?___lwmod 9 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_control_step 898 0 CODE 0 text25 reservatorio.o
+_pat_cur 4A 0 COMRAM 1 bssCOMRAM reservatorio.o
+__Hreset_vec 4 0 CODE 0 reset_vec reservatorio.o
+_set_pump 11A2 0 CODE 0 text27 reservatorio.o
+__Lramtop 800 0 RAM 0 ramtop reservatorio.o
+__Lrparam 0 0 COMRAM 1 rparam reservatorio.o
+__end_of_adc_read_once 136C 0 CODE 0 text9 reservatorio.o
+__pcinit 1102 0 CODE 0 cinit reservatorio.o
+__end_of_uart_num3 12C8 0 CODE 0 text3 reservatorio.o
+__end_of_uart_putc 13AE 0 CODE 0 text4 reservatorio.o
+__end_of_uart_puts 1350 0 CODE 0 text2 reservatorio.o
+__ptext0 F66 0 CODE 0 text0 reservatorio.o
+__ptext1 C26 0 CODE 0 text1 reservatorio.o
+__ptext2 1330 0 CODE 0 text2 reservatorio.o
+__ptext3 12A4 0 CODE 0 text3 reservatorio.o
+__ptext4 13A2 0 CODE 0 text4 reservatorio.o
+__ptext5 CCC 0 CODE 0 text5 reservatorio.o
+__ptext6 1048 0 CODE 0 text6 reservatorio.o
+__ptext7 13AE 0 CODE 0 text7 reservatorio.o
+__ptext8 A78 0 CODE 0 text8 reservatorio.o
+__ptext9 1350 0 CODE 0 text9 reservatorio.o
+__Lstruct 0 0 COMRAM 1 struct reservatorio.o
+_cur_freq 43 0 COMRAM 1 bssCOMRAM reservatorio.o
+__Ltext10 0 0 ABS 0 text10 reservatorio.o
+__Ltext11 0 0 ABS 0 text11 reservatorio.o
+__Ltext12 0 0 ABS 0 text12 reservatorio.o
+__Ltext13 0 0 ABS 0 text13 reservatorio.o
+__Ltext14 0 0 ABS 0 text14 reservatorio.o
+__Ltext15 0 0 ABS 0 text15 reservatorio.o
+__Ltext16 0 0 ABS 0 text16 reservatorio.o
+__Ltext17 0 0 ABS 0 text17 reservatorio.o
+__Ltext18 0 0 ABS 0 text18 reservatorio.o
+__Ltext19 0 0 ABS 0 text19 reservatorio.o
+__Ltext20 0 0 ABS 0 text20 reservatorio.o
+__Ltext21 0 0 ABS 0 text21 reservatorio.o
+__Ltext22 0 0 ABS 0 text22 reservatorio.o
+__Ltext23 0 0 ABS 0 text23 reservatorio.o
+__Ltext24 0 0 ABS 0 text24 reservatorio.o
+__Ltext25 0 0 ABS 0 text25 reservatorio.o
+__Ltext26 0 0 ABS 0 text26 reservatorio.o
+__Ltext27 0 0 ABS 0 text27 reservatorio.o
+_pat_base 4B 0 COMRAM 1 bssCOMRAM reservatorio.o
+_pat_freq 45 0 COMRAM 1 bssCOMRAM reservatorio.o
+_pat_left 49 0 COMRAM 1 bssCOMRAM reservatorio.o
+__end_of_set_pump 11EE 0 CODE 0 text27 reservatorio.o
+__ramtop 800 0 RAM 0 ramtop startup.o
+__Lpowerup 0 0 CODE 0 powerup reservatorio.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data reservatorio.o
+__H__absolute__ 0 0 ABS 0 __absolute__ reservatorio.o
+alarm_text@i 5 0 COMRAM 1 cstackCOMRAM reservatorio.o
+alarm_text@p 2 0 COMRAM 1 cstackCOMRAM reservatorio.o
+alarm_text@t 4 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__psmallconst 800 0 SMALLCONST 0 smallconst reservatorio.o
+__Lreset_vec 0 0 CODE 0 reset_vec reservatorio.o
+_uart_num3 12A4 0 CODE 0 text3 reservatorio.o
+_uart_putc 13A2 0 CODE 0 text4 reservatorio.o
+_uart_puts 1330 0 CODE 0 text2 reservatorio.o
+lcd_line@i 8 0 COMRAM 1 cstackCOMRAM reservatorio.o
+lcd_line@s 4 0 COMRAM 1 cstackCOMRAM reservatorio.o
+___heap_hi 0 0 ABS 0 - startup.o
+___heap_lo 0 0 ABS 0 - startup.o
+___param_bank 0 0 ABS 0 - reservatorio.o
+___intlo_stack_hi 0 0 STACK 2 stack startup.o
+___intlo_stack_lo 0 0 STACK 2 stack startup.o
+__Hbigdata 0 0 BIGRAM 1 bigdata reservatorio.o
+_fault_cnt 4D 0 COMRAM 1 bssCOMRAM reservatorio.o
+_fault_ref 4E 0 COMRAM 1 bssCOMRAM reservatorio.o
+__end_of__initialization 1140 0 CODE 0 cinit reservatorio.o
+__Libigdata 0 0 CODE 0 ibigdata reservatorio.o
+__pidataBANK0 12EC 0 CODE 0 idataBANK0 reservatorio.o
+__end_of_sound_tick D66 0 CODE 0 text5 reservatorio.o
+__Lclrtext 0 0 ABS 0 clrtext reservatorio.o
+___lmul@product A 0 COMRAM 1 cstackCOMRAM reservatorio.o
+lcd_putc@c 2 0 COMRAM 1 cstackCOMRAM reservatorio.o
+___lmul@multiplicand 6 0 COMRAM 1 cstackCOMRAM reservatorio.o
+___lldiv@quotient 16 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__pcstackCOMRAM 2 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_sound_alarm 1380 0 CODE 0 text26 reservatorio.o
+_alarm_text 1230 0 CODE 0 text18 reservatorio.o
+__end_of_fmt3 DEE 0 CODE 0 text15 reservatorio.o
+__end_of_main FD8 0 CODE 0 text0 reservatorio.o
+__end_of_take 12EC 0 CODE 0 text24 reservatorio.o
+__pintcode 8 0 CODE 0 intcode reservatorio.o
+__end_of_control_step 98C 0 CODE 0 text25 reservatorio.o
+_CMCON FB4 0 ABS 0 - reservatorio.o
+_PORTB F81 0 ABS 0 - reservatorio.o
+_RCSTA FAB 0 ABS 0 - reservatorio.o
+_SPBRG FAF 0 ABS 0 - reservatorio.o
+_T0CON FD5 0 ABS 0 - reservatorio.o
+_T2CON FCA 0 ABS 0 - reservatorio.o
+_TMR0H FD7 0 ABS 0 - reservatorio.o
+_TMR0L FD6 0 ABS 0 - reservatorio.o
+_TRISA F92 0 ABS 0 - reservatorio.o
+_TRISB F93 0 ABS 0 - reservatorio.o
+_TRISC F94 0 ABS 0 - reservatorio.o
+_TRISD F95 0 ABS 0 - reservatorio.o
+_TRISE F96 0 ABS 0 - reservatorio.o
+_TXREG FAD 0 ABS 0 - reservatorio.o
+_TXSTA FAC 0 ABS 0 - reservatorio.o
+__HRAM 0 0 ABS 0 - reservatorio.o
+__Hbss 0 0 RAM 1 bss reservatorio.o
+__Hram 0 0 ABS 0 ram reservatorio.o
+__Hsfr 0 0 ABS 0 sfr reservatorio.o
+__LRAM 1 0 ABS 0 - reservatorio.o
+__Lbss 0 0 RAM 1 bss reservatorio.o
+__Lram 0 0 ABS 0 ram reservatorio.o
+__Lsfr 0 0 ABS 0 sfr reservatorio.o
+_fault 52 0 COMRAM 1 bssCOMRAM reservatorio.o
+_phase 4C 0 COMRAM 1 bssCOMRAM reservatorio.o
+_ticks 54 0 COMRAM 1 bssCOMRAM reservatorio.o
+uart_num3@b 13 0 COMRAM 1 cstackCOMRAM reservatorio.o
+uart_num3@v 11 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_pump_on 53 0 COMRAM 1 bssCOMRAM reservatorio.o
+_CCP2CON FBA 0 ABS 0 - reservatorio.o
+__HdataBANK0 0 0 ABS 0 dataBANK0 reservatorio.o
+uart_putc@c 2 0 COMRAM 1 cstackCOMRAM reservatorio.o
+uart_puts@s 3 0 COMRAM 1 cstackCOMRAM reservatorio.o
+_evt_mode 57 0 COMRAM 1 bssCOMRAM reservatorio.o
+_evt_pump 56 0 COMRAM 1 bssCOMRAM reservatorio.o
+__Hsivt_hi 0 0 CODE 0 sivt_hi reservatorio.o
+__Hsivt_lo 18 0 CODE 0 sivt_lo reservatorio.o
+__initialization 1102 0 CODE 0 cinit reservatorio.o
+btemp0 1 0 ABS 0 - reservatorio.o
+btemp1 2 0 ABS 0 - reservatorio.o
+__pdataCOMRAM 58 0 COMRAM 1 dataCOMRAM reservatorio.o
+__Hfardata 0 0 FARRAM 0 fardata reservatorio.o
+__Hsmallconst 898 0 SMALLCONST 0 smallconst reservatorio.o
+tone_on@div 1F 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__Lifardata 0 0 CODE 0 ifardata reservatorio.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs reservatorio.o
+fmt3@p E 0 COMRAM 1 cstackCOMRAM reservatorio.o
+fmt3@v F 0 COMRAM 1 cstackCOMRAM reservatorio.o
+__Hintcode E 0 CODE 0 intcode reservatorio.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 1 1
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text25 0 898 898 B1D 1
+cstackCOMRAM 1 2 2 57 1
+reset_vec 0 0 0 4 1
+intcode 0 8 8 A 1
+smallconst 0 800 800 98 1
+dataBANK0 1 60 60 22 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
